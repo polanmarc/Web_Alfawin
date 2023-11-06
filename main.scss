@@ -1,0 +1,27 @@
+@import 'abstract/functions';
+@import 'abstract/mixins';
+@import 'abstract/placeholders';
+@import 'abstract/variables.scss';
+
+@import 'base/base.scss';
+@import 'base/reset.scss';
+@import 'base/typography.scss';
+
+@import 'components/navegation';
+@import 'components/header';
+@import 'components/buttons';
+@import 'components/caracteristicas';
+@import 'components/soporte';
+@import 'components/footer';
+@import 'components/premise';
+@import 'components/table';
+@import 'components/principio';
+@import 'components/beneficios';
+@import 'components/ayuda';
+
+@import 'layout/footer.scss';
+@import 'layout/forms.scss';
+@import 'layout/grid.scss';
+@import 'layout/header.scss';
+@import 'layout/navigation.scss';
+@import 'layout/sidebar.scss';

@@ -1,0 +1,63 @@
+#beneficios {
+
+    padding-bottom: 80px;
+
+    p {
+        font-size: 16px;
+    }
+
+    .vertical-line {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+
+        span {
+            width: 30px;
+            height: 30px;
+            background-color: var(--color-sintelec);
+            color: var(--color-blanco-oscuro);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 70px 0;
+            position: relative;
+        }
+    
+        span::before {
+            z-index: 1;
+            content: "";
+            width: 2px;
+            background-color: var(--color-sintelec);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 140px;
+        }
+    
+        span:last-child::before {
+            height: 0px;
+        }
+
+    }
+
+    #contenido_texto {
+        margin-left: 30px;
+        div {
+            height: 100%;
+            width: 70%;
+            margin-left: 40px;
+        }
+
+        div:first-child, div:nth-child(2) {
+            padding-top: 69px;
+        }
+
+        div:last-child {
+            padding-top: 60px;
+        }
+        
+    }
+
+}

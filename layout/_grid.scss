@@ -1,0 +1,42 @@
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template:
+        "a a a"
+        "b b b"
+        "d d d"
+        "h h h"
+        "c c c"
+        "g g g"
+        "f f f"
+        "e e e";
+        grid-template-rows: auto;
+
+        #principio {
+            grid-area: b;
+        }
+
+        #ayuda {
+            grid-area: c;
+        }
+
+        #soporte {
+            grid-area: d;
+        }
+
+        #caracteristicas {
+            grid-area: g;
+        }
+
+        #premise {
+            grid-area: f;
+        }
+
+        #beneficios {
+            grid-area: h;
+        }
+
+    }
+}

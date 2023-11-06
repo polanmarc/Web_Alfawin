@@ -1,0 +1,25 @@
+#soporte {
+
+    h2 {
+        color: white;
+    }
+
+    .celdas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .celdas:last-child {
+        padding-bottom: 20px;
+    }
+
+    ul {
+        list-style-image: url(../public/img/tic.png);
+        padding-left: 10px;
+    }
+
+    p,li {
+        font-size: 18px;
+    }
+    
+}

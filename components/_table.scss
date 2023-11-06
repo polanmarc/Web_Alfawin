@@ -1,0 +1,27 @@
+#caracteristicas {
+    
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        width: 75%;
+    }
+    
+    table thead {
+        background-color: var(--color-rojo);
+    }
+    
+    table th {
+        padding: 15px 10px;
+        text-align: center;
+        color: var(--color-blanco-oscuro);
+    }
+    
+    table td {
+        padding: 7px;
+    }
+
+    table td:nth-child(2), table td:nth-child(3) {
+        text-align: center;
+    }
+
+}

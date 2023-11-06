@@ -1,0 +1,107 @@
+body {
+    background-color: var(--color-blanco-oscuro);
+    scroll-behavior: smooth;
+}
+
+header, footer, #soporte {
+    background-color: var(--color-rojo);
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+#caracteristicas, #soporte div, #premise, #ayuda div, #beneficios {
+    max-width: 1000px;
+}
+
+section {
+    padding: 30px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blanco-oscuro);
+}
+
+h1 {
+    font-family: var(--font-Alegreya);
+    font-size: 50px;
+    padding-bottom: 15px;
+}
+
+h2, h3, p, li, td, th {
+    font-family: var(--font-OpenSans);
+}
+
+h2 {
+    font-size: 30px;
+    padding: 10px 0px 20px 15px;
+}
+
+h3 {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+hr {
+    color: var(--color-blanco-oscuro);
+}
+
+p {
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+
+li, td {
+    padding-bottom: 10px;
+}
+
+p,a {
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex {
+    display: flex;
+}
+
+.celdas {
+    margin: 20px 10px;
+    padding: 7px 10px;
+    flex-direction: column;
+    border-radius: 5px;
+    color: var(--color-blanco-oscuro);
+}
+
+.celdas_fondo {
+    margin: 20px 10px;
+    padding: 7px 20px;
+    border-radius: 18px;
+    background-color: var(--color-sintelec);
+    color: var(--color-blanco-oscuro);
+    height: 200px;
+    display: flex;
+    transition: width 0.5s ease, height 0.5s ease;
+    align-items: center;
+}
+
+.celdas_fondo:hover {
+    transition: 0.5s;
+    background: var(--hover-gradiant-down-up);
+    height: 220px;
+    width: calc(100% + 20px);
+}
+
+.cambiar_color {
+    color: var(--color-rojo);
+}
+
+.cambiar_color_azul {
+    color: var(--color-sintelec);
+}

@@ -1,0 +1,435 @@
+:root {
+  --color-rojo: #d40000;
+  --color-blanco-oscuro: #f5f5f5;
+  --color-sintelec: #008b8b;
+  --color-sintelec-alternativo: #14d8d0;
+  --font-Alegreya: "Alegreya", sans-serif;
+  --font-OpenSans: "OpenSans";
+  --hover-gradiant-down-up: linear-gradient(180deg, rgba(212,0,0,0.798739564185049) 0%, rgba(0,139,139,1) 100%);
+  --hover-gradiant-left-right: linear-gradient(270deg, rgba(212,0,0,0.8183474073223039) 0%, rgba(0,139,139,1) 100%);
+}
+
+body {
+  background-color: var(--color-blanco-oscuro);
+  scroll-behavior: smooth;
+}
+
+header, footer, #soporte {
+  background-color: var(--color-rojo);
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+#caracteristicas, #soporte div, #premise, #ayuda div, #beneficios {
+  max-width: 1000px;
+}
+
+section {
+  padding: 30px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blanco-oscuro);
+}
+
+h1 {
+  font-family: var(--font-Alegreya);
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+h2, h3, p, li, td, th {
+  font-family: var(--font-OpenSans);
+}
+
+h2 {
+  font-size: 30px;
+  padding: 10px 0px 20px 15px;
+}
+
+h3 {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+hr {
+  color: var(--color-blanco-oscuro);
+}
+
+p {
+  padding-bottom: 10px;
+  line-height: 30px;
+}
+
+li, td {
+  padding-bottom: 10px;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex {
+  display: flex;
+}
+
+.celdas {
+  margin: 20px 10px;
+  padding: 7px 10px;
+  flex-direction: column;
+  border-radius: 5px;
+  color: var(--color-blanco-oscuro);
+}
+
+.celdas_fondo {
+  margin: 20px 10px;
+  padding: 7px 20px;
+  border-radius: 18px;
+  background-color: var(--color-sintelec);
+  color: var(--color-blanco-oscuro);
+  height: 200px;
+  display: flex;
+  transition: width 0.5s ease, height 0.5s ease;
+  align-items: center;
+}
+
+.celdas_fondo:hover {
+  transition: 0.5s;
+  background: var(--hover-gradiant-down-up);
+  height: 220px;
+  width: calc(100% + 20px);
+}
+
+.cambiar_color {
+  color: var(--color-rojo);
+}
+
+.cambiar_color_azul {
+  color: var(--color-sintelec);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0 auto;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("../public/font/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../public/font/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+header nav ul, footer nav ul {
+  display: flex;
+}
+
+header nav, footer nav {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: var(--color-rojo);
+  color: white;
+  padding: 10px 0px;
+  position: fixed;
+  z-index: 2;
+}
+header img {
+  width: 100px;
+}
+
+.read_more {
+  background-color: var(--color-rojo);
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.read_more:hover {
+  transition: 0.5s;
+  background-color: white;
+  background-color: var(--color-sintelec);
+}
+
+#caracteristicas p {
+  padding-left: 15px;
+}
+
+#soporte h2 {
+  color: white;
+}
+#soporte .celdas {
+  flex-direction: column;
+  width: 100%;
+}
+#soporte .celdas:last-child {
+  padding-bottom: 20px;
+}
+#soporte ul {
+  list-style-image: url(../public/img/tic.png);
+  padding-left: 10px;
+}
+#soporte p, #soporte li {
+  font-size: 18px;
+}
+
+footer {
+  color: white;
+  padding: 15px 0px;
+}
+footer img {
+  width: 40px;
+  margin-right: 15px;
+}
+footer p {
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+#premise img {
+  width: 150px;
+}
+#premise .celdas {
+  height: 150px;
+}
+#premise .autocomplet {
+  width: 100%;
+}
+
+#caracteristicas table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 75%;
+}
+#caracteristicas table thead {
+  background-color: var(--color-rojo);
+}
+#caracteristicas table th {
+  padding: 15px 10px;
+  text-align: center;
+  color: var(--color-blanco-oscuro);
+}
+#caracteristicas table td {
+  padding: 7px;
+}
+#caracteristicas table td:nth-child(2), #caracteristicas table td:nth-child(3) {
+  text-align: center;
+}
+
+#principio {
+  padding: 240px 0px 120px 0px;
+}
+#principio div {
+  flex-direction: column;
+  text-align: center;
+}
+#principio div .cambiar_color_azul {
+  font-size: 14px;
+}
+
+#beneficios {
+  padding-bottom: 80px;
+}
+#beneficios p {
+  font-size: 16px;
+}
+#beneficios .vertical-line {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+#beneficios .vertical-line span {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-sintelec);
+  color: var(--color-blanco-oscuro);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+  position: relative;
+}
+#beneficios .vertical-line span::before {
+  z-index: 1;
+  content: "";
+  width: 2px;
+  background-color: var(--color-sintelec);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 140px;
+}
+#beneficios .vertical-line span:last-child::before {
+  height: 0px;
+}
+#beneficios #contenido_texto {
+  margin-left: 30px;
+}
+#beneficios #contenido_texto div {
+  height: 100%;
+  width: 70%;
+  margin-left: 40px;
+}
+#beneficios #contenido_texto div:first-child, #beneficios #contenido_texto div:nth-child(2) {
+  padding-top: 69px;
+}
+#beneficios #contenido_texto div:last-child {
+  padding-top: 60px;
+}
+
+#ayuda {
+  color: var(--color-blanco-oscuro);
+  background-color: var(--color-rojo);
+}
+
+@media (min-width: 1024px) {
+  footer {
+    grid-area: e;
+    display: flex;
+  }
+  /*footer {
+      grid-area: e;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template:
+      "a b";
+      grid-template-rows: auto;
+  }
+
+  footer div:first-child {
+      grid-area: a;
+  }
+
+  footer nav {
+      grid-area: b;
+  } */
+}
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template: "a a a" "b b b" "d d d" "h h h" "c c c" "g g g" "f f f" "e e e";
+    grid-template-rows: auto;
+  }
+  body #principio {
+    grid-area: b;
+  }
+  body #ayuda {
+    grid-area: c;
+  }
+  body #soporte {
+    grid-area: d;
+  }
+  body #caracteristicas {
+    grid-area: g;
+  }
+  body #premise {
+    grid-area: f;
+  }
+  body #beneficios {
+    grid-area: h;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    grid-area: a;
+    display: flex;
+  }
+  /*
+  header div {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a b";
+      grid-template-rows: auto;
+
+      div:first-child {
+          grid-area: a;
+      }
+
+      nav {
+          grid-area: b;
+      }
+
+  }
+  */
+}
+@media (min-width: 1024px) {
+  header nav li {
+    margin-right: 30px;
+  }
+  header nav li {
+    margin-right: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */

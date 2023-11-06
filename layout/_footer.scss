@@ -1,0 +1,26 @@
+@media (min-width: 1024px) {
+
+    footer {
+        grid-area: e;
+        display: flex;
+    }
+
+    /*footer {
+        grid-area: e;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template:
+        "a b";
+        grid-template-rows: auto;
+    }
+
+    footer div:first-child {
+        grid-area: a;
+    }
+
+    footer nav {
+        grid-area: b;
+    } */
+
+}
