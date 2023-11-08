@@ -1,23 +1,21 @@
 body {
     background-color: var(--color-blanco-oscuro);
     scroll-behavior: smooth;
+    letter-spacing: 0.5px;
 }
 
-header, footer, #soporte {
+header, footer, #soporte, #ayuda {
     background-color: var(--color-rojo);
     width: 100%;
 }
 
-section {
-    width: 100%;
-}
-
-#caracteristicas, #soporte div, #premise, #ayuda div, #beneficios {
+#caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
     max-width: 1000px;
 }
 
 section {
-    padding: 30px 0px;
+    padding: 80px 0px 80px 0px;
+    width: 100%;
 }
 
 a {
@@ -27,7 +25,7 @@ a {
 
 h1 {
     font-family: var(--font-Alegreya);
-    font-size: 50px;
+    font-size: 60px;
     padding-bottom: 15px;
 }
 
@@ -36,7 +34,7 @@ h2, h3, p, li, td, th {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 45px;
     padding: 10px 0px 20px 15px;
 }
 
@@ -58,7 +56,7 @@ li, td {
     padding-bottom: 10px;
 }
 
-p,a {
+p,a, button {
     font-size: 20px;
 }
 

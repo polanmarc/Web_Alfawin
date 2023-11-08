@@ -1,16 +1,17 @@
 @media (min-width: 1024px) {
     body {
         display: grid;
-        gap: 10px;
+        gap: 0px;
         grid-template-columns: repeat(3, 1fr);
         grid-template:
         "a a a"
         "b b b"
-        "d d d"
         "h h h"
-        "c c c"
+        "d d d"
         "g g g"
+        "c c c"
         "f f f"
+        "i i i"
         "e e e";
         grid-template-rows: auto;
 
@@ -36,6 +37,10 @@
 
         #beneficios {
             grid-area: h;
+        }
+
+        #contact_us {
+            grid-area: i;
         }
 
     }

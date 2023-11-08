@@ -1,0 +1,30 @@
+#contact_us {
+
+    .container {
+        align-items: center;
+        padding: 20px;
+
+        .container:last-child {
+            background-color: var(--color-rojo);
+            padding: 70px 20px;
+            color: white;
+            border-radius: 20px;
+            width: 50%;
+        }
+
+    }
+
+    .separar {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h2, h3, p {
+        padding-left: 0px;
+    }
+
+}

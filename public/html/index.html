@@ -17,21 +17,23 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#soporte">Soporte</a></li>
         <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#soporte">Soporte</a></li>
         <li><a href="#caracteristicas">Carcateristicas</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li><a href="#contact_us">Contact Us</a></li>
       </ul>
     </nav>
   </header>
   <section id="principio">
+    <video autoplay muted loop id="video-fondo">
+      <source src="../video/alfawin-video-mp4-recortado.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de videos.
+    </video>
     <div class="container flex">
       <h1>ALFAWIN</h1>
-      <p>El software de Gestión y <br>
-        Contabilidad que se adapta a tus<br>
-        necesidades</p>
+      <p>El software de Gestión y <br> Contabilidad que se adapta a tus<br> necesidades</p>
       <p class="cambiar_color_azul">Más de 300 instalaciones</p>
-      <div class="flex"><button class="read_more"><a href="promise.html">Ver más</a></button></div>
+      <div class="flex"><button class="btn"><a href="promise.html">Ver más</a></button></div>
     </div>
   </section>
   <section id="soporte">
@@ -176,28 +178,33 @@
     </div>
   </section>
   <section id="beneficios">
-    <h2>Beneficios</h2>
-    <div class="container">
-      <div class="vertical-line">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
+    <div class="conteiner">
+      <h2>Beneficios</h2>
+      <div>
+        <img src="../img/beneficios-min.png" alt="">
       </div>
-      <div id="contenido_texto">
-        <div>
-          <h3>Optimización</h3>
-          <p>Aseguramos un funcionamiento óptimo de los equipos y software de tu empresa, realizando copias de seguridad
-            de datos.</p>
+      <div class="container">
+        <div class="vertical-line">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
         </div>
-        <div>
-          <h3>Personalización</h3>
-          <p>Detectamos y activamos soluciones personalizadas para satisfacer las demandas específicas de tu
-            organización.</p>
-        </div>
-        <div>
-          <h3>Tranquilidad</h3>
-          <p>Nos encargamos de todo para que puedas centrarte en las tareas diarias de tu proyecto, ofreciendo un
-            soporte 100% adaptado.</p>
+        <div id="contenido_texto">
+          <div>
+            <h3>Optimización</h3>
+            <p>Aseguramos un funcionamiento óptimo de los equipos y software de tu empresa, realizando copias de seguridad
+              de datos.</p>
+          </div>
+          <div>
+            <h3>Personalización</h3>
+            <p>Detectamos y activamos soluciones personalizadas para satisfacer las demandas específicas de tu
+              organización.</p>
+          </div>
+          <div>
+            <h3>Tranquilidad</h3>
+            <p>Nos encargamos de todo para que puedas centrarte en las tareas diarias de tu proyecto, ofreciendo un
+              soporte 100% adaptado.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -339,6 +346,43 @@
       </table>
     </div>
   </section>
+  <section id="contact_us">
+    <div class="container">
+      <div class="container">
+        <div class="separar">
+          <h2>Contacto</h2>
+          <h3>Sintelec</h3>
+          <p>Carrer de José M. <br>
+            Torrijos, 8 <br>
+            (Cantonada Passatge Ymbern) <br>
+            08302 Mataró <br>
+            Barcelona</p>
+        </div>
+        <div class="separar">
+          <div>
+            <h3><i>Icono</i> Telefono</h3>
+            <p>+34 935 500 865</p>
+          </div>
+          <div>
+            <h3><i>Icono</i> Soporte</h3>
+            <p>suport@sintelec.es</p>
+          </div>
+          <div>
+            <h3><i>Icono</i> Trabaja con nostros</h3>
+            <p>info@sintelec.es</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <h2>Soporte</h2>
+          <h3>Help Desk Sintelec</h3>
+          <p>Plataforma TiQ</p>
+          <button class="btn_reves"><a href="https://tiq.cat/welcome">Acceso</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer>
     <div>
       <p>© Alfawin - Sintelec</p>
@@ -354,92 +398,3 @@
 </body>
 
 </html>
-
-<!--
-<div class="celdas_row celdas">
-  <img src="../img/soporte-tecnico.png" alt="Imagen Soporte">
-  <div>
-    <p>Una vez adquirida la licencia, no es obligatorio
-      contratar los servicios de soporte, aunque estamos
-      seguros serán de su interés nuestras servicios</p>
-    <p>Servicios integrales Sintelec incluye:</p>
-    <nav>
-      <ul>
-        <li>Actualizaciones Software</li>
-        <li>Gestión copias seguridad</li>
-        <li>Virtualización escritorios remotos</li>
-        <li>Help Desk (Hardware y software)</li>
-        <li>Instalación y soporte sistemas informáticos</li>
-      </ul>
-    </nav>
-  </div>
-</div>
-
-<section id="caracteristicas">
-    <div class="container">
-      <h2>CARACTERISTICAS GENERALES</h2>
-      <p>Programa de gestión y contabilidad que se adapta
-        a tu trabajo de forma sencill</p>
-    </div>
-    <div class="container">
-      <div>
-        <div class="celdas">
-          <p>icono de gestion</p>
-          <h3>Alfawin Gestión/contabilidad</h3>
-        </div>
-        <div class="celdas">
-          <h3>TPV Agiliza proceso de ventas</h3>
-          <p>Adaptación del software alfawin para entornos de
-            caja rápida mostrador, manteniendo todo la
-            potencia y funcionalidades de Alfawin.</p>
-          <div class="flex"><button class="read_more">Ver más</button></div>
-        </div>
-      </div>
-      <div>
-        <div class="celdas">
-          <h3>TiQ</h3>
-          <p>Distribución Descentralizada de tareas y avisos.</p>
-          <div class="flex"><button class="read_more">Ver más</button></div>
-        </div>
-        <div class="celdas">
-          <h3>Programación a medida</h3>
-          <p>Desarrollo de microaplicaciones que generalmente
-            se entregan en menos de tres semanas y que se
-            focallizan en uno o varios procesos bien definidos.</p>
-          <div class="flex"><button class="read_more">Ver más</button></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  .container:first-child {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    @media (min-width: 1024px) {
-    #caracteristicas {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template:
-        "a b c";
-        grid-template-rows: auto;
-
-        div:first-child {
-            grid-area: a;
-        }
-
-        div:nth-child(2) {
-            grid-area: b;
-        }
-
-        div:last-child {
-            grid-area: c;
-        }
-
-    }
-}
-
--->
