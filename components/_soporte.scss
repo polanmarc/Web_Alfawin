@@ -4,11 +4,6 @@
         color: white;
     }
 
-    .celdas {
-        flex-direction: column;
-        width: 100%;
-    }
-
     .celdas:last-child {
         padding-bottom: 20px;
     }
@@ -18,7 +13,7 @@
         padding-left: 10px;
     }
 
-    p,li {
+    li {
         font-size: 17px;
     }
     

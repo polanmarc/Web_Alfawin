@@ -9,7 +9,7 @@ header, footer, #soporte, #ayuda {
     width: 100%;
 }
 
-#caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
+.caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
     max-width: 1000px;
 }
 
@@ -36,6 +36,10 @@ h2, h3, p, li, td, th {
 h2 {
     font-size: 45px;
     padding: 10px 0px 20px 15px;
+}
+
+.icono_p {
+    font-size: 17px;
 }
 
 h3 {
@@ -75,6 +79,7 @@ p,a, button {
     flex-direction: column;
     border-radius: 5px;
     color: var(--color-blanco-oscuro);
+    width: 100%;
 }
 
 .celdas_fondo {
