@@ -2,37 +2,37 @@
 
 .animated-section-down-up {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0);
     transition: opacity 2s, transform 2s;
 }
   
 .animated-section-down-up.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-5px);
 }
 
 // Derecha a izquierda
 
 .animated-section-right-left {
     opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 4s, transform 4s;
+    transform: translateX(0px);
+    transition: opacity 2s, transform 2s;
   }
   
   .animated-section-right-left.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-5px);
   }
 
 // Izquierda a derecha
 
 .animated-section-left-right {
     opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 4s, transform 4s;
+    transform: translateX(0px);
+    transition: opacity 2s, transform 2s;
   }
   
   .animated-section-left-right.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0px);
   }

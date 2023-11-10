@@ -31,7 +31,7 @@
             grid-area: d;
         }
 
-        .caracteristicas {
+        #caracteristicas_pre {
             grid-area: g;
         }
 
@@ -87,7 +87,7 @@
             grid-area: d;
         }
 
-        .caracteristicas {
+        #caracteristicas_pre {
             grid-area: g;
         }
 
@@ -110,7 +110,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
     body {
         display: grid;
         gap: 0px;
@@ -121,6 +121,7 @@
         "h h"
         "d d"
         "g g"
+        "c c"
         "c c"
         "f f"
         "i i"

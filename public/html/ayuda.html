@@ -200,6 +200,83 @@
         }
 
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    
+    const down_up = document.querySelectorAll('.animated-section-down-up');
+    const left_right = document.querySelectorAll('.animated-section-left-right');
+    const right_left = document.querySelectorAll('.animated-section-right-left');
+
+    down_up.forEach((element) => {
+        if (element.classList[0] === 'animated-section-down-up') {
+            window.addEventListener('scroll', () => handleScroll_down_up(element));
+        }
+    });
+
+    left_right.forEach((element) => {
+        if (element.classList[0] === 'animated-section-left-right') {
+            window.addEventListener('scroll', () => handleScroll_right_left(element));
+        }
+    });
+
+    right_left.forEach((element) => {
+        if (element.classList[0] === 'animated-section-right-left') {
+            window.addEventListener('scroll', () => handleScroll_left_right(element));
+        }
+    });
+
+    // Izquierda a derecha
+
+    function isInViewport_left_right(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.left >= 0 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+  
+    function handleScroll_left_right(element) {
+        if (isInViewport_left_right(element)) {
+            element.classList.add('visible');
+        }
+    }
+
+    // Derecha a izquierda
+
+    function isInViewport_right_left(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.left >= 0 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+  
+    function handleScroll_right_left(element) {
+        if (isInViewport_right_left(element)) {
+            element.classList.add('visible');
+        }
+    }
+
+    // De abajo a arriba
+
+    function isInViewport_down_up(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+  
+    function handleScroll_down_up(element) {
+        if (isInViewport_down_up(element)) {
+            element.classList.add('visible');
+        }
+    }
+
+});
+
 }
 
 -->

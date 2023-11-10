@@ -1,3 +1,5 @@
+// Animacion cuando cliques un ancor que vaya bajando poco a poco
+
 document.querySelectorAll('header a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -7,11 +9,15 @@ document.querySelectorAll('header a').forEach(anchor => {
         if (targetElement) {
             targetElement.scrollIntoView({
                 behavior: 'smooth',
-                block: 'start'
+                block: 'start',
+                inline: 'center'
             });
         }
     });
 });
+
+
+// Animacion entrar pagina que salga el elemento
 
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function() {
@@ -19,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector("header").classList.add('visible');
     }, 500);
 });
+
+// Animacion mientras haces scroll que vayan apareciendo
 
 document.addEventListener('DOMContentLoaded', function () {
     const animatedElements = document.querySelectorAll('.animated-section-down-up, .animated-section-left-right, .animated-section-right-left');
@@ -43,178 +51,56 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isInViewport(element)) {
                 element.classList.add('visible');
             }
+
+            underlinedAncor(element);
+
         });
     }
-});
 
-/*
-
-document.addEventListener('DOMContentLoaded', function () {
-    
-    const down_up = document.querySelectorAll('.animated-section-down-up');
-    const left_right = document.querySelectorAll('.animated-section-left-right');
-    const right_left = document.querySelectorAll('.animated-section-right-left');
-
-    down_up.forEach((element) => {
-        if (element.classList[0] === 'animated-section-down-up') {
-            window.addEventListener('scroll', () => handleScroll_down_up(element));
-        }
-    });
-
-    left_right.forEach((element) => {
-        if (element.classList[0] === 'animated-section-left-right') {
-            window.addEventListener('scroll', () => handleScroll_right_left(element));
-        }
-    });
-
-    right_left.forEach((element) => {
-        if (element.classList[0] === 'animated-section-right-left') {
-            window.addEventListener('scroll', () => handleScroll_left_right(element));
-        }
-    });
-
-    // Izquierda a derecha
-
-    function isInViewport_left_right(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.left >= 0 &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-  
-    function handleScroll_left_right(element) {
-        if (isInViewport_left_right(element)) {
-            element.classList.add('visible');
-        }
-    }
-
-    // Derecha a izquierda
-
-    function isInViewport_right_left(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.left >= 0 &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-  
-    function handleScroll_right_left(element) {
-        if (isInViewport_right_left(element)) {
-            element.classList.add('visible');
-        }
-    }
-
-    // De abajo a arriba
-
-    function isInViewport_down_up(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-  
-    function handleScroll_down_up(element) {
-        if (isInViewport_down_up(element)) {
-            element.classList.add('visible');
+    function underlinedAncor(element) {
+        const ancorsElements = document.querySelectorAll('header a');
+            
+        if (element.parentNode.parentNode.nodeName == "SECTION") {
+            ancorsElements.forEach(ancor => {
+                const encorId = ancor.getAttribute('href').substring(1)
+                if (element.parentNode.parentNode.id == encorId) {
+                    //console.log("CONSEGUIDO")
+                }
+            });
         }
     }
 
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    
-    const header_div = document.querySelector('header div');
-    const header_nav = document.querySelector('header nav');
-    const footer = document.querySelector('footer');
-    const sections = document.querySelectorAll('section > div');
-    const sections_diferents = document.querySelectorAll('section > div > div')
+// Menu aparecer desaparecer
 
-    sections.forEach((element) => {
-        if (element.classList[0] === 'animated-section-down-up') {
-            window.addEventListener('scroll', () => handleScroll_down_up(element));
-        }
-        else if (element.classList[0] === 'animated-section-right-left') {
-            window.addEventListener('scroll', () => handleScroll_right_left(element));
-            console.log("hola")
-        }
-        else if (element.classList[0] === 'animated-section-left-right') {
-            window.addEventListener('scroll', () => handleScroll_left_right(element));
-        }
-    });
+const img = document.querySelector('.menu');
+const menu = document.getElementById('menu');
+const manuAparecer = document.getElementById('aparecer');
+const media = window.matchMedia("(min-width: 1024px)");
+const media_primera = window.matchMedia("(max-width: 1024px)");
 
-    sections_diferents.forEach((element) => {
-        if (element.classList[0] === 'animated-section-down-up') {
-            window.addEventListener('scroll', () => handleScroll_down_up(element));
-        }
-        else if (element.classList[0] === 'animated-section-right-left') {
-            window.addEventListener('scroll', () => handleScroll_right_left(element));
-            console.log("hola")
-        }
-        else if (element.classList[0] === 'animated-section-left-right') {
-            window.addEventListener('scroll', () => handleScroll_left_right(element));
-        }
-    });
-
-    // Llamadas elemetnos header y footer
-
-    if (header_div.classList[0] === 'animated-section-down-up' && header_nav.classList[0] === 'animated-section-down-up' && footer.classList[0] === 'animated-section-down-up') {
-        window.addEventListener('scroll', () => handleScroll_down_up(header_div));
-        window.addEventListener('scroll', () => handleScroll_down_up(header_nav));
-        window.addEventListener('scroll', () => handleScroll_down_up(footer));
+function mirarTamaño(media) {
+    if (media.matches) {
+        manuAparecer.style.display = 'none';
+        menu.style.display = 'block';
     }
-
-    function isInViewport_left_right(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.left >= 0 &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+    else {
+        menu.style.display = 'none';
+        manuAparecer.style.display = 'none';
     }
-  
-    function handleScroll_left_right(element) {
-        if (isInViewport_left_right(element)) {
-            element.classList.add('visible');
-        }
+}
+
+mirarTamaño(media);
+
+media.addEventListener("change", mirarTamaño)
+
+img.addEventListener('click', () => {
+    let styleMenu = window.getComputedStyle(manuAparecer);
+    if (styleMenu.getPropertyValue("display") === 'none') {
+        manuAparecer.style.display = 'block';
+        menu.style.display = 'none';
+    } else if (styleMenu.getPropertyValue("display") === 'block') {
+        manuAparecer.style.display = 'none';
     }
-
-    // Derecha a izquierda
-
-    function isInViewport_right_left(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.left >= 0 &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-  
-    function handleScroll_right_left(element) {
-        if (isInViewport_right_left(element)) {
-            element.classList.add('visible');
-        }
-    }
-
-    // De abajo a arriba
-
-    function isInViewport_down_up(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-  
-    function handleScroll_down_up(element) {
-        if (isInViewport_down_up(element)) {
-            element.classList.add('visible');
-        }
-    }
-
 });
-
-*/
