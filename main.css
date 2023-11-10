@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-rojo: #d40000;
   --color-blanco-oscuro: #f5f5f5;
@@ -196,6 +197,7 @@ header nav, footer nav {
 header {
   background-color: var(--color-rojo);
   color: white;
+  display: flex;
   padding: 10px 0px;
   position: fixed;
   z-index: 2;
@@ -311,6 +313,7 @@ header img {
 footer {
   color: white;
   padding: 15px 0px;
+  display: flex;
 }
 footer img {
   width: 40px;
@@ -473,7 +476,7 @@ footer p {
 .animated-section-right-left {
   opacity: 0;
   transform: translateX(20px);
-  transition: opacity 3s, transform 3s;
+  transition: opacity 4s, transform 4s;
 }
 
 .animated-section-right-left.visible {
@@ -484,7 +487,7 @@ footer p {
 .animated-section-left-right {
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 3s, transform 3s;
+  transition: opacity 4s, transform 4s;
 }
 
 .animated-section-left-right.visible {
@@ -493,10 +496,6 @@ footer p {
 }
 
 @media (min-width: 1024px) {
-  footer {
-    grid-area: e;
-    display: flex;
-  }
   /*footer {
       grid-area: e;
       display: grid;
@@ -523,6 +522,9 @@ footer p {
     grid-template: "a a a" "b b b" "h h h" "d d d" "g g g" "c c c" "f f f" "i i i" "e e e";
     grid-template-rows: auto;
   }
+  body header {
+    grid-area: a;
+  }
   body #principio {
     grid-area: b;
   }
@@ -544,12 +546,83 @@ footer p {
   body #contact_us {
     grid-area: i;
   }
+  body footer {
+    grid-area: e;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template: "a a" "b b" "h h" "d d" "g g" "c c" "f f" "i i" "e e";
+    grid-template-rows: auto;
+  }
+  body header {
+    grid-area: a;
+  }
+  body #principio {
+    grid-area: b;
+  }
+  body #ayuda {
+    grid-area: c;
+  }
+  body #soporte {
+    grid-area: d;
+  }
+  body .caracteristicas {
+    grid-area: g;
+  }
+  body #premise {
+    grid-area: f;
+  }
+  body #beneficios {
+    grid-area: h;
+  }
+  body #contact_us {
+    grid-area: i;
+  }
+  body footer {
+    grid-area: e;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template: "a a" "b b" "h h" "d d" "g g" "c c" "f f" "i i" "e e";
+    grid-template-rows: auto;
+  }
+  body header {
+    grid-area: a;
+  }
+  body #principio {
+    grid-area: b;
+  }
+  body #ayuda {
+    grid-area: c;
+  }
+  body #soporte {
+    grid-area: d;
+  }
+  body .caracteristicas {
+    grid-area: g;
+  }
+  body #premise {
+    grid-area: f;
+  }
+  body #beneficios {
+    grid-area: h;
+  }
+  body #contact_us {
+    grid-area: i;
+  }
+  body footer {
+    grid-area: e;
+  }
 }
 @media (min-width: 1024px) {
-  header {
-    grid-area: a;
-    display: flex;
-  }
   /*
   header div {
       display: grid;
@@ -569,11 +642,22 @@ footer p {
   }
   */
 }
+@media (max-width: 1024px) {
+  header {
+    overflow-y: hidden; /* o auto o scroll, según sea necesario */
+    overflow-x: hidden; /* o auto o scroll, según sea necesario */
+  }
+}
 @media (min-width: 1024px) {
   header nav li {
     margin-right: 30px;
   }
+}
+@media (max-width: 1024px) {
   header nav li {
-    margin-right: 30px;
+    margin-right: 15px;
+  }
+  header nav {
+    margin-right: 15px;
   }
 }/*# sourceMappingURL=main.css.map */

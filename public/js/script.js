@@ -14,6 +14,42 @@ document.querySelectorAll('header a').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function() {
+      document.querySelector("#principio .animated-section-down-up").classList.add('visible');
+      document.querySelector("header").classList.add('visible');
+    }, 500);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const animatedElements = document.querySelectorAll('.animated-section-down-up, .animated-section-left-right, .animated-section-right-left');
+
+    window.addEventListener('scroll', () => handleScroll(animatedElements));
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight) &&
+            rect.right <= (window.innerWidth)
+        );
+    }
+
+    function handleScroll(elements) {
+        elements.forEach(element => {
+            const animationDirection = element.classList.contains('animated-section-left-right') ? 'left_right' :
+                element.classList.contains('animated-section-right-left') ? 'right_left' : 'down_up';
+
+            if (isInViewport(element)) {
+                element.classList.add('visible');
+            }
+        });
+    }
+});
+
+/*
+
+document.addEventListener('DOMContentLoaded', function () {
     
     const down_up = document.querySelectorAll('.animated-section-down-up');
     const left_right = document.querySelectorAll('.animated-section-left-right');
@@ -89,8 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-/*
-
 document.addEventListener('DOMContentLoaded', function () {
     
     const header_div = document.querySelector('header div');
@@ -132,8 +166,6 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', () => handleScroll_down_up(header_nav));
         window.addEventListener('scroll', () => handleScroll_down_up(footer));
     }
-
-    // Izquierda a derecha
 
     function isInViewport_left_right(element) {
         const rect = element.getBoundingClientRect();

@@ -15,6 +15,10 @@
         "e e e";
         grid-template-rows: auto;
 
+        header {
+            grid-area: a;
+        }
+
         #principio {
             grid-area: b;
         }
@@ -41,6 +45,122 @@
 
         #contact_us {
             grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template:
+        "a a"
+        "b b"
+        "h h"
+        "d d"
+        "g g"
+        "c c"
+        "f f"
+        "i i"
+        "e e";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        #principio {
+            grid-area: b;
+        }
+
+        #ayuda {
+            grid-area: c;
+        }
+
+        #soporte {
+            grid-area: d;
+        }
+
+        .caracteristicas {
+            grid-area: g;
+        }
+
+        #premise {
+            grid-area: f;
+        }
+
+        #beneficios {
+            grid-area: h;
+        }
+
+        #contact_us {
+            grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template:
+        "a a"
+        "b b"
+        "h h"
+        "d d"
+        "g g"
+        "c c"
+        "f f"
+        "i i"
+        "e e";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        #principio {
+            grid-area: b;
+        }
+
+        #ayuda {
+            grid-area: c;
+        }
+
+        #soporte {
+            grid-area: d;
+        }
+
+        .caracteristicas {
+            grid-area: g;
+        }
+
+        #premise {
+            grid-area: f;
+        }
+
+        #beneficios {
+            grid-area: h;
+        }
+
+        #contact_us {
+            grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
         }
 
     }
