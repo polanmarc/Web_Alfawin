@@ -1,37 +1,63 @@
 // Animacion cuando cliques un ancor que vaya bajando poco a poco
 
 document.querySelectorAll('header a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'center'
-            });
-        }
-    });
+    if (document.querySelector("#main_page")) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+    
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'center'
+                });
+            }
+        });
+    }
 });
 
 
 // Animacion entrar pagina que salga el elemento
 
 document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function() {
-      document.querySelector("#principio .animated-section-down-up").classList.add('visible');
-      document.querySelector("header").classList.add('visible');
-    }, 500);
+
+    const media = window.matchMedia("(max-width: 500px)");
+    const animatedElements =  document.querySelectorAll(".animation");
+
+    if (media.matches) {
+        animatedElements.forEach(element => {
+            element.classList.add('visible');
+        });
+    }
+    else {
+        if (document.querySelector("#principio .animated-section-down-up")) {
+            setTimeout(function() {
+                document.querySelector("#principio .animated-section-down-up").classList.add('visible');
+                document.querySelector("header").classList.add('visible');
+            }, 500);
+        }
+        else {
+            setTimeout(function() {
+                document.querySelector("header").classList.add('visible');
+                document.querySelector(".caracteristicas .animated-section-left-right").classList.add('visible');
+                document.querySelector(".caracteristicas .animated-section-right-left").classList.add('visible');
+                document.querySelector(".caracteristicas .animated-section-down-up").classList.add('visible');
+            }, 500);
+        }
+    }
+
 });
 
 // Animacion mientras haces scroll que vayan apareciendo
 
 document.addEventListener('DOMContentLoaded', function () {
-    const animatedElements = document.querySelectorAll('.animated-section-down-up, .animated-section-left-right, .animated-section-right-left');
+    const animatedElements = document.querySelectorAll(".animation");
 
-    window.addEventListener('scroll', () => handleScroll(animatedElements));
+    window.addEventListener('scroll', () => {
+        handleScroll(animatedElements)
+    });
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -52,23 +78,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 element.classList.add('visible');
             }
 
-            underlinedAncor(element);
-
         });
     }
 
-    function underlinedAncor(element) {
+   /*function underlinedAncor() {
         const ancorsElements = document.querySelectorAll('header a');
-            
-        if (element.parentNode.parentNode.nodeName == "SECTION") {
-            ancorsElements.forEach(ancor => {
-                const encorId = ancor.getAttribute('href').substring(1)
-                if (element.parentNode.parentNode.id == encorId) {
-                    //console.log("CONSEGUIDO")
-                }
-            });
-        }
-    }
+    
+        ancorsElements.forEach(ancor => {
+            const encorId = ancor.getAttribute('href').substring(1);
+            const section = document.getElementById(encorId);
+    
+            if (section && isInViewport(section)) {
+                ancorsElements.forEach(a => a.classList.remove('active'));
+                ancor.classList.add('active');
+            }
+        });
+    }*/
 
 });
 
@@ -78,7 +103,6 @@ const img = document.querySelector('.menu');
 const menu = document.getElementById('menu');
 const manuAparecer = document.getElementById('aparecer');
 const media = window.matchMedia("(min-width: 1024px)");
-const media_primera = window.matchMedia("(max-width: 1024px)");
 
 function mirarTamaño(media) {
     if (media.matches) {

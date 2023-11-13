@@ -9,7 +9,7 @@ header, footer, #soporte, #ayuda {
     width: 100%;
 }
 
-.caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
+#caracteristicas_pre, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us, #caracteristicas_page .caracteristicas {
     max-width: 1000px;
 }
 
@@ -71,6 +71,7 @@ p,a, button {
 
 .flex {
     display: flex;
+    justify-content: center;
 }
 
 .celdas {

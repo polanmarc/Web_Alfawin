@@ -21,7 +21,7 @@ header, footer, #soporte, #ayuda {
   width: 100%;
 }
 
-.caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
+#caracteristicas_pre, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us, #caracteristicas_page .caracteristicas {
   max-width: 1000px;
 }
 
@@ -83,6 +83,7 @@ p, a, button {
 
 .flex {
   display: flex;
+  justify-content: center;
 }
 
 .celdas {
@@ -291,9 +292,14 @@ header .menu {
 */
 #caracteristicas_page .caracteristicas {
   padding-top: 150px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.caracteristicas p {
+#caracteristicas_pre {
+  text-align: center;
+}
+#caracteristicas_pre p {
   padding-left: 15px;
 }
 
@@ -311,6 +317,14 @@ header .menu {
   font-size: 17px;
 }
 
+@media (max-width: 830px) {
+  #soporte .container {
+    flex-wrap: wrap;
+  }
+  #soporte .celdas {
+    width: auto;
+  }
+}
 footer {
   color: white;
   padding: 15px 0px;
@@ -389,6 +403,12 @@ footer p {
   font-weight: bold;
 }
 
+#beneficios {
+  /*background-image: url(../public/img/132.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;*/
+}
 #beneficios p {
   font-size: 16px;
 }
@@ -464,36 +484,38 @@ footer p {
   padding-left: 0px;
 }
 
-.animated-section-down-up {
+.animation {
   opacity: 0;
+}
+
+.animation.visible {
+  opacity: 1;
+}
+
+.animated-section-down-up {
   transform: translateY(0);
   transition: opacity 2s, transform 2s;
 }
 
 .animated-section-down-up.visible {
-  opacity: 1;
   transform: translateY(-5px);
 }
 
 .animated-section-right-left {
-  opacity: 0;
   transform: translateX(0px);
   transition: opacity 2s, transform 2s;
 }
 
 .animated-section-right-left.visible {
-  opacity: 1;
   transform: translateX(-5px);
 }
 
 .animated-section-left-right {
-  opacity: 0;
   transform: translateX(0px);
   transition: opacity 2s, transform 2s;
 }
 
 .animated-section-left-right.visible {
-  opacity: 1;
   transform: translateX(0px);
 }
 
@@ -588,12 +610,12 @@ footer p {
     grid-area: e;
   }
 }
-@media (max-width: 830px) {
+@media (max-width: 500px) {
   body {
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template: "a a" "b b" "h h" "d d" "g g" "c c" "c c" "f f" "i i" "e e";
+    grid-template: "a a" "b b" "h h" "h h" "h h" "h h" "d d" "g g" "c c" "c c" "f f" "i i" "e e";
     grid-template-rows: auto;
   }
   body header {

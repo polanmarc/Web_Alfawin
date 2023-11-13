@@ -110,7 +110,7 @@
     }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 500px) {
     body {
         display: grid;
         gap: 0px;
@@ -118,6 +118,9 @@
         grid-template:
         "a a"
         "b b"
+        "h h"
+        "h h"
+        "h h"
         "h h"
         "d d"
         "g g"
