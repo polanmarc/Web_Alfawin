@@ -19,33 +19,23 @@ document.querySelectorAll('header a').forEach(anchor => {
 });
 
 
-// Animacion entrar pagina que salga el elemento
+// Animacion entrar pagina que salga el elemento y modificaciones grid 
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const media = window.matchMedia("(max-width: 500px)");
-    const animatedElements =  document.querySelectorAll(".animation");
-
-    if (media.matches) {
-        animatedElements.forEach(element => {
-            element.classList.add('visible');
-        });
+    if (document.querySelector("#principio .animated-section-down-up")) {
+        setTimeout(function() {
+            document.querySelector("#principio .animated-section-down-up").classList.add('visible');
+            document.querySelector("header").classList.add('visible');
+        }, 500);
     }
     else {
-        if (document.querySelector("#principio .animated-section-down-up")) {
-            setTimeout(function() {
-                document.querySelector("#principio .animated-section-down-up").classList.add('visible');
-                document.querySelector("header").classList.add('visible');
-            }, 500);
-        }
-        else {
-            setTimeout(function() {
-                document.querySelector("header").classList.add('visible');
-                document.querySelector(".caracteristicas .animated-section-left-right").classList.add('visible');
-                document.querySelector(".caracteristicas .animated-section-right-left").classList.add('visible');
-                document.querySelector(".caracteristicas .animated-section-down-up").classList.add('visible');
-            }, 500);
-        }
+        setTimeout(function() {
+            document.querySelector("header").classList.add('visible');
+            document.querySelector(".caracteristicas .animated-section-left-right").classList.add('visible');
+            document.querySelector(".caracteristicas .animated-section-right-left").classList.add('visible');
+            document.querySelector(".caracteristicas .animated-section-down-up").classList.add('visible');
+        }, 500);
     }
 
 });
@@ -127,4 +117,34 @@ img.addEventListener('click', () => {
     } else if (styleMenu.getPropertyValue("display") === 'block') {
         manuAparecer.style.display = 'none';
     }
+});
+
+// Modificaciones grid
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const media_500 = window.matchMedia("(max-width: 500px)");
+    const media_850 = window.matchMedia("(max-width: 850px)");
+
+    const animatedElements =  document.querySelectorAll(".animation");
+    const cells_container_500 =  document.querySelectorAll("#soporte .container, #caracteristicas_pre .container, #ayuda .container");
+    const cells_container_850 =  document.querySelectorAll("#contact_us .container");
+    let content_h2 =  document.querySelector("#soporte > div > h2");
+
+    if (media_500.matches) {
+        animatedElements.forEach(element => {
+            element.classList.add('visible');
+        });
+        cells_container_500.forEach(element => {
+            element.classList.remove('container');
+        });
+        content_h2.innerHTML = content_h2.textContent.replace(" "," <br>");
+    }
+
+    if (media_850.matches) {
+        cells_container_850.forEach(element => {
+            element.classList.remove('container');
+        });
+    }
+
 });

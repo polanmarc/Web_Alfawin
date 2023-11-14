@@ -4,8 +4,8 @@ body {
     letter-spacing: 0.5px;
 }
 
-header, footer, #soporte, #ayuda {
-    background-color: var(--color-rojo);
+footer, header, #soporte, #ayuda {
+    background-color: var(--color-rojo) !important;
     width: 100%;
 }
 
@@ -84,8 +84,10 @@ p,a, button {
 }
 
 .celdas_fondo {
-    margin: 20px 10px;
-    padding: 7px 20px;
+    //margin: 20px 10px;
+    //padding: 7px 20px;
+    margin: 10px 5px;
+    padding: 5px 10px;
     border-radius: 18px;
     background-color: var(--color-sintelec);
     color: var(--color-blanco-oscuro);
@@ -99,7 +101,6 @@ p,a, button {
     transition: 0.5s;
     background: var(--hover-gradiant-down-up);
     height: 220px;
-    width: calc(100% + 20px);
 }
 
 .cambiar_color {
