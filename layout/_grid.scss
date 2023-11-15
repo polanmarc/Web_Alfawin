@@ -114,21 +114,21 @@
     body {
         display: grid;
         gap: 0px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template:
-        "a a"
-        "b b"
-        "h h"
-        "h h"
-        "h h"
-        "h h"
-        "d d"
-        "g g"
-        "c c"
-        "c c"
-        "f f"
-        "i i"
-        "e e";
+        "a"
+        "b"
+        "h"
+        "h"
+        "h"
+        "h"
+        "d"
+        "g"
+        "c"
+        "c"
+        "f"
+        "i"
+        "e";
         grid-template-rows: auto;
 
         header {

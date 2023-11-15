@@ -12,7 +12,7 @@
 
 .animated-section-down-up {
   transform: translateY(0);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
   
 .animated-section-down-up.visible {
@@ -23,7 +23,7 @@
 
 .animated-section-right-left {
   transform: translateX(0px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
   
 .animated-section-right-left.visible {
@@ -34,7 +34,7 @@
 
 .animated-section-left-right {
   transform: translateX(0px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .animated-section-left-right.visible {

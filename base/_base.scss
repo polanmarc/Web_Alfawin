@@ -2,6 +2,7 @@ body {
     background-color: var(--color-blanco-oscuro);
     scroll-behavior: smooth;
     letter-spacing: 0.5px;
+    overflow-anchor: none;
 }
 
 footer, header, #soporte, #ayuda {
@@ -9,7 +10,7 @@ footer, header, #soporte, #ayuda {
     width: 100%;
 }
 
-#caracteristicas_pre, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us, #caracteristicas_page .caracteristicas {
+#caracteristicas_pre, #soporte > div, #premise, #ayuda > div, #beneficios > div, #contact_us, #caracteristicas_page > .caracteristicas {
     max-width: 1000px;
 }
 
@@ -75,7 +76,7 @@ p,a, button {
 }
 
 .celdas {
-    margin: 20px 10px;
+    margin: 10px 5px;
     padding: 7px 10px;
     flex-direction: column;
     border-radius: 5px;
@@ -84,17 +85,15 @@ p,a, button {
 }
 
 .celdas_fondo {
-    //margin: 20px 10px;
-    //padding: 7px 20px;
-    margin: 10px 5px;
-    padding: 5px 10px;
+    margin: 10px;
+    padding: 7px 10px;
     border-radius: 18px;
     background-color: var(--color-sintelec);
     color: var(--color-blanco-oscuro);
     height: 200px;
-    display: flex;
-    transition: width 0.5s ease, height 0.5s ease;
+    transition: height 0.5s ease;
     align-items: center;
+    display: grid;
 }
 
 .celdas_fondo:hover {
@@ -110,3 +109,8 @@ p,a, button {
 .cambiar_color_azul {
     color: var(--color-sintelec);
 }
+
+.active {
+    text-decoration: underline;
+    color: green;
+}  

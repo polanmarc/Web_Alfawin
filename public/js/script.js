@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             document.querySelector("#principio .animated-section-down-up").classList.add('visible');
             document.querySelector("header").classList.add('visible');
-        }, 500);
+        }, 300);
     }
     else {
         setTimeout(function() {
@@ -35,57 +35,64 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector(".caracteristicas .animated-section-left-right").classList.add('visible');
             document.querySelector(".caracteristicas .animated-section-right-left").classList.add('visible');
             document.querySelector(".caracteristicas .animated-section-down-up").classList.add('visible');
-        }, 500);
+        }, 300);
     }
 
 });
 
 // Animacion mientras haces scroll que vayan apareciendo
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    const animatedElements = document.querySelectorAll(".animation");
-
+    const animatedElements = document.querySelectorAll(".animation, .underline");
+  
     window.addEventListener('scroll', () => {
-        handleScroll(animatedElements)
+      handleScroll(animatedElements);
     });
-
+  
     function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight) &&
-            rect.right <= (window.innerWidth)
-        );
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top <= window.innerHeight * 0.7 &&
+        rect.bottom >= 0
+      );
     }
 
-    function handleScroll(elements) {
-        elements.forEach(element => {
-            const animationDirection = element.classList.contains('animated-section-left-right') ? 'left_right' :
-                element.classList.contains('animated-section-right-left') ? 'right_left' : 'down_up';
+    function underlinedAncor(encontrado) {
 
-            if (isInViewport(element)) {
-                element.classList.add('visible');
-            }
-
-        });
-    }
-
-   /*function underlinedAncor() {
         const ancorsElements = document.querySelectorAll('header a');
-    
+
         ancorsElements.forEach(ancor => {
             const encorId = ancor.getAttribute('href').substring(1);
-            const section = document.getElementById(encorId);
-    
-            if (section && isInViewport(section)) {
-                ancorsElements.forEach(a => a.classList.remove('active'));
-                ancor.classList.add('active');
-            }
-        });
-    }*/
+            let antiguo = "";
 
-});
+            if (encontrado == encorId) {
+                ancor.classList.add('active');
+                antiguo = ancor;
+                console.log(antiguo);
+            }
+            else if (antiguo.getAttribute("href").substring(1) !== encorId) {
+                antiguo.classList.remove('active');
+            }
+
+        });
+    }
+  
+    function handleScroll(elements) {
+  
+      elements.forEach((element) => {
+        const animationDirection = element.classList.contains('animated-section-left-right') ? 'left_right' :
+          element.classList.contains('animated-section-right-left') ? 'right_left' : 'down_up';
+  
+        if (isInViewport(element)) {
+            element.classList.add('visible');
+            if (element.id != '') {
+                underlinedAncor(element.id);
+            }
+        }
+      });
+    }
+  });
 
 // Menu aparecer desaparecer
 
@@ -128,8 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const animatedElements =  document.querySelectorAll(".animation");
     const cells_container_500 =  document.querySelectorAll("#soporte .container, #caracteristicas_pre .container, #ayuda .container");
-    const cells_container_850 =  document.querySelectorAll("#contact_us .container");
-    let content_h2 =  document.querySelector("#soporte > div > h2");
+    const cells_container_850 =  document.querySelectorAll("#contact_us > div");
 
     if (media_500.matches) {
         animatedElements.forEach(element => {
@@ -138,11 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
         cells_container_500.forEach(element => {
             element.classList.remove('container');
         });
-        content_h2.innerHTML = content_h2.textContent.replace(" "," <br>");
     }
-
     if (media_850.matches) {
         cells_container_850.forEach(element => {
+            console.log(element)
+            element.parentNode.classList.add('flex');
             element.classList.remove('container');
         });
     }

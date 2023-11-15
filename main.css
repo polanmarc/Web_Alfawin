@@ -14,6 +14,7 @@ body {
   background-color: var(--color-blanco-oscuro);
   scroll-behavior: smooth;
   letter-spacing: 0.5px;
+  overflow-anchor: none;
 }
 
 footer, header, #soporte, #ayuda {
@@ -21,7 +22,7 @@ footer, header, #soporte, #ayuda {
   width: 100%;
 }
 
-#caracteristicas_pre, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us, #caracteristicas_page .caracteristicas {
+#caracteristicas_pre, #soporte > div, #premise, #ayuda > div, #beneficios > div, #contact_us, #caracteristicas_page > .caracteristicas {
   max-width: 1000px;
 }
 
@@ -87,7 +88,7 @@ p, a, button {
 }
 
 .celdas {
-  margin: 20px 10px;
+  margin: 10px 5px;
   padding: 7px 10px;
   flex-direction: column;
   border-radius: 5px;
@@ -96,15 +97,15 @@ p, a, button {
 }
 
 .celdas_fondo {
-  margin: 10px 5px;
-  padding: 5px 10px;
+  margin: 10px;
+  padding: 7px 10px;
   border-radius: 18px;
   background-color: var(--color-sintelec);
   color: var(--color-blanco-oscuro);
   height: 200px;
-  display: flex;
-  transition: width 0.5s ease, height 0.5s ease;
+  transition: height 0.5s ease;
   align-items: center;
+  display: grid;
 }
 
 .celdas_fondo:hover {
@@ -119,6 +120,11 @@ p, a, button {
 
 .cambiar_color_azul {
   color: var(--color-sintelec);
+}
+
+.active {
+  text-decoration: underline;
+  color: green;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -335,16 +341,6 @@ footer p {
   font-size: 18px;
 }
 
-#premise img {
-  width: 150px;
-}
-#premise .celdas {
-  height: 150px;
-}
-#premise .autocomplet {
-  width: 100%;
-}
-
 .caracteristicas table {
   border-collapse: collapse;
   margin-top: 20px;
@@ -390,7 +386,6 @@ footer p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 35%;
   padding: 40px 0px;
   color: white;
 }
@@ -457,6 +452,9 @@ footer p {
 #ayuda {
   color: var(--color-blanco-oscuro);
 }
+#ayuda h2 br {
+  display: none;
+}
 
 #contact_us .container {
   align-items: center;
@@ -490,7 +488,7 @@ footer p {
 
 .animated-section-down-up {
   transform: translateY(0);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .animated-section-down-up.visible {
@@ -499,7 +497,7 @@ footer p {
 
 .animated-section-right-left {
   transform: translateX(0px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .animated-section-right-left.visible {
@@ -508,7 +506,7 @@ footer p {
 
 .animated-section-left-right {
   transform: translateX(0px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .animated-section-left-right.visible {
@@ -610,8 +608,8 @@ footer p {
   body {
     display: grid;
     gap: 0px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template: "a a" "b b" "h h" "h h" "h h" "h h" "d d" "g g" "c c" "c c" "f f" "i i" "e e";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template: "a" "b" "h" "h" "h" "h" "d" "g" "c" "c" "f" "i" "e";
     grid-template-rows: auto;
   }
   body header {
@@ -743,11 +741,6 @@ footer p {
   }
 }
 @media (max-width: 500px) {
-  #principio .container {
-    left: 25%;
-  }
-}
-@media (max-width: 500px) {
   #beneficios #contenido_texto {
     margin-left: 10px;
   }
@@ -792,9 +785,12 @@ footer p {
 @media (min-width: 1024px) {
   #ayuda .hola {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a b c d";
     grid-auto-rows: auto;
+  }
+  #ayuda .hola .celdas_fondo {
+    width: 80%;
   }
   #ayuda .hola .celdas_fondo:first-child {
     grid-area: a;
@@ -809,13 +805,16 @@ footer p {
     grid-area: d;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   #ayuda .hola {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a b" "c d";
     grid-auto-rows: auto;
   }
+  #ayuda .hola .celdas_fondo {
+    height: 100px;
+  }
   #ayuda .hola .celdas_fondo:first-child {
     grid-area: a;
   }
@@ -829,15 +828,24 @@ footer p {
     grid-area: d;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 480px) {
+  #ayuda h2 {
+    margin-left: 60px;
+  }
+  #ayuda h2 br {
+    display: flex;
+  }
   #ayuda .hola {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "a" "b" "c" "d";
     grid-auto-rows: auto;
   }
   #ayuda .hola .celdas_fondo {
-    height: 100px;
+    width: 275px;
+    white-space: pre-line;
+    height: 150px;
+    margin-left: 40px;
   }
   #ayuda .hola .celdas_fondo:hover {
     height: 120px;
@@ -853,5 +861,19 @@ footer p {
   }
   #ayuda .hola .celdas_fondo:last-child {
     grid-area: d;
+  }
+}
+.hola {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  #contact_us > div > div:first-child {
+    flex-direction: column;
+  }
+  #contact_us .separar:first-child {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
