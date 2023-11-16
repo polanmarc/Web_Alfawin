@@ -22,7 +22,7 @@ footer, header, #soporte, #ayuda {
   width: 100%;
 }
 
-#caracteristicas_pre, #soporte > div, #premise, #ayuda > div, #beneficios > div, #contact_us, #caracteristicas_page > .caracteristicas {
+#caracteristicas_pre, #soporte > div, #premise, #ayuda > div, #beneficios > div, #contact_us, .caracteristicas_tabla {
   max-width: 1000px;
 }
 
@@ -298,12 +298,11 @@ header .menu {
 }
 
 */
-#caracteristicas_page .caracteristicas {
+#caracteristicas_page .caracteristicas_tabla {
   padding-top: 150px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+}
+#caracteristicas_page .caracteristicas_tabla button {
+  margin-top: 30px;
 }
 
 #caracteristicas_pre .caracteristicas {
@@ -341,23 +340,23 @@ footer p {
   font-size: 18px;
 }
 
-.caracteristicas table {
+.caracteristicas_tabla table {
   border-collapse: collapse;
   margin-top: 20px;
   width: 75%;
 }
-.caracteristicas table thead {
+.caracteristicas_tabla table thead {
   background-color: var(--color-rojo);
 }
-.caracteristicas table th {
+.caracteristicas_tabla table th {
   padding: 15px 10px;
   text-align: center;
   color: var(--color-blanco-oscuro);
 }
-.caracteristicas table td {
+.caracteristicas_tabla table td {
   padding: 7px;
 }
-.caracteristicas table td:nth-child(2), .caracteristicas table td:nth-child(3) {
+.caracteristicas_tabla table td:nth-child(2), .caracteristicas_tabla table td:nth-child(3) {
   text-align: center;
 }
 
@@ -533,111 +532,129 @@ footer p {
   } */
 }
 @media (min-width: 1024px) {
-  body {
+  #main_page {
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(3, 1fr);
     grid-template: "a a a" "b b b" "h h h" "d d d" "g g g" "c c c" "f f f" "i i i" "e e e";
     grid-template-rows: auto;
   }
-  body header {
+  #main_page header {
     grid-area: a;
   }
-  body #principio {
+  #main_page #principio {
     grid-area: b;
   }
-  body #ayuda {
+  #main_page #ayuda {
     grid-area: c;
   }
-  body #soporte {
+  #main_page #soporte {
     grid-area: d;
   }
-  body #caracteristicas_pre {
+  #main_page #caracteristicas_pre {
     grid-area: g;
   }
-  body #premise {
+  #main_page #premise {
     grid-area: f;
   }
-  body #beneficios {
+  #main_page #beneficios {
     grid-area: h;
   }
-  body #contact_us {
+  #main_page #contact_us {
     grid-area: i;
   }
-  body footer {
+  #main_page footer {
     grid-area: e;
   }
 }
 @media (max-width: 1024px) {
-  body {
+  #main_page {
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(2, 1fr);
     grid-template: "a a" "b b" "h h" "d d" "g g" "c c" "f f" "i i" "e e";
     grid-template-rows: auto;
   }
-  body header {
+  #main_page header {
     grid-area: a;
   }
-  body #principio {
+  #main_page #principio {
     grid-area: b;
   }
-  body #ayuda {
+  #main_page #ayuda {
     grid-area: c;
   }
-  body #soporte {
+  #main_page #soporte {
     grid-area: d;
   }
-  body #caracteristicas_pre {
+  #main_page #caracteristicas_pre {
     grid-area: g;
   }
-  body #premise {
+  #main_page #premise {
     grid-area: f;
   }
-  body #beneficios {
+  #main_page #beneficios {
     grid-area: h;
   }
-  body #contact_us {
+  #main_page #contact_us {
     grid-area: i;
   }
-  body footer {
+  #main_page footer {
     grid-area: e;
   }
 }
 @media (max-width: 500px) {
-  body {
+  #main_page {
     display: grid;
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
     grid-template: "a" "b" "h" "h" "h" "h" "d" "g" "c" "c" "f" "i" "e";
     grid-template-rows: auto;
   }
-  body header {
+  #main_page header {
     grid-area: a;
   }
-  body #principio {
+  #main_page #principio {
     grid-area: b;
   }
-  body #ayuda {
+  #main_page #ayuda {
     grid-area: c;
   }
-  body #soporte {
+  #main_page #soporte {
     grid-area: d;
   }
-  body #caracteristicas_pre {
+  #main_page #caracteristicas_pre {
     grid-area: g;
   }
-  body #premise {
+  #main_page #premise {
     grid-area: f;
   }
-  body #beneficios {
+  #main_page #beneficios {
     grid-area: h;
   }
-  body #contact_us {
+  #main_page #contact_us {
     grid-area: i;
   }
-  body footer {
+  #main_page footer {
     grid-area: e;
+  }
+}
+@media (min-width: 1024px) {
+  #caracteristicas_page {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template: "a a a" "b b b" "c c c";
+    grid-template-rows: auto;
+  }
+  #caracteristicas_page header {
+    grid-area: a;
+  }
+  #caracteristicas_page .caracteristicas_tabla {
+    grid-area: b;
+  }
+  #caracteristicas_page footer {
+    grid-area: c;
   }
 }
 @media (min-width: 1024px) {

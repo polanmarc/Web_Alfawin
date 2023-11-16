@@ -23,18 +23,23 @@ document.querySelectorAll('header a').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    if (document.querySelector("#principio .animated-section-down-up")) {
+    const body = document.body.id;
+
+    setTimeout(function() {
+        document.querySelector("header").classList.add('visible');
+    }, 300);
+
+    if (body === "main_page") {
         setTimeout(function() {
             document.querySelector("#principio .animated-section-down-up").classList.add('visible');
-            document.querySelector("header").classList.add('visible');
         }, 300);
     }
-    else {
+    else if (body === "caracteristicas_page") {
+        const animaciones = document.querySelectorAll(".animation");
         setTimeout(function() {
-            document.querySelector("header").classList.add('visible');
-            document.querySelector(".caracteristicas .animated-section-left-right").classList.add('visible');
-            document.querySelector(".caracteristicas .animated-section-right-left").classList.add('visible');
-            document.querySelector(".caracteristicas .animated-section-down-up").classList.add('visible');
+            animaciones.forEach(element => {
+                element.classList.add('visible');
+            });
         }, 300);
     }
 
@@ -64,15 +69,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ancorsElements.forEach(ancor => {
             const encorId = ancor.getAttribute('href').substring(1);
-            let antiguo = "";
+            let antiguo_ancor = "";
+            let antiguo_href = "";
+            let contador = 0;
 
             if (encontrado == encorId) {
                 ancor.classList.add('active');
-                antiguo = ancor;
-                console.log(antiguo);
+                antiguo_ancor = ancor;
+                antiguo_href = encorId;
             }
-            else if (antiguo.getAttribute("href").substring(1) !== encorId) {
-                antiguo.classList.remove('active');
+
+            contador++;
+
+            if (ancor !== antiguo_ancor && encorId !== antiguo_href && contador > 10) {
+                ancor.classList.remove('active');
             }
 
         });
@@ -92,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  });
+});
 
 // Menu aparecer desaparecer
 

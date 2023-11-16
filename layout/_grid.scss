@@ -1,5 +1,7 @@
+// Pagina principal
+
 @media (min-width: 1024px) {
-    body {
+    #main_page {
         display: grid;
         gap: 0px;
         grid-template-columns: repeat(3, 1fr);
@@ -55,7 +57,7 @@
 }
 
 @media (max-width: 1024px) {
-    body {
+    #main_page {
         display: grid;
         gap: 0px;
         grid-template-columns: repeat(2, 1fr);
@@ -111,7 +113,7 @@
 }
 
 @media (max-width: 500px) {
-    body {
+    #main_page {
         display: grid;
         gap: 0px;
         grid-template-columns: repeat(1, 1fr);
@@ -165,6 +167,34 @@
 
         footer {
             grid-area: e;
+        }
+
+    }
+}
+
+// Caracteristicas page
+
+@media (min-width: 1024px) {
+    #caracteristicas_page {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template:
+        "a a a"
+        "b b b"
+        "c c c";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        .caracteristicas_tabla {
+            grid-area: b;
+        }
+
+        footer {
+            grid-area: c;
         }
 
     }
