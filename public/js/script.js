@@ -164,3 +164,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+// Cambiar tema oscuro
+
+const tema = document.getElementById("cambiar-tema");   
+let temaOscuro = false;
+
+tema.addEventListener("click",(element) => cambiarTema(element))
+
+function cambiarTema(element) {
+    if (!temaOscuro) {
+        document.documentElement.classList.remove("light")
+        document.documentElement.classList.add("dark")
+        temaOscuro = true;
+    }
+    else {
+        document.documentElement.classList.add("light")
+        document.documentElement.classList.remove("dark")
+        temaOscuro = false;
+    }
+}

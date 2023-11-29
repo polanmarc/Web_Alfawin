@@ -1,8 +1,16 @@
-body {
+#main_page, #caracteristicas_page {
     background-color: var(--color-blanco-oscuro);
     scroll-behavior: smooth;
     letter-spacing: 0.5px;
     overflow-anchor: none;
+}
+
+header, #principio, #soporte, #ayuda, footer {
+    color: var(--color-blanco);
+}
+
+#beneficios, #caracteristicas_pre, #contact_us {
+    color: var(--color-negro);
 }
 
 footer, header, #soporte, #ayuda {
@@ -110,7 +118,7 @@ p,a, button {
     color: var(--color-sintelec);
 }
 
-.active {
-    text-decoration: underline;
-    color: green;
-}  
+//.active {
+//    text-decoration: underline;
+//    color: green;
+//}  

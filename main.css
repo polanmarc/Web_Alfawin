@@ -1,20 +1,44 @@
+@charset "UTF-8";
 :root {
+  --font-Alegreya: "Alegreya", sans-serif;
+  --font-OpenSans: "OpenSans";
+}
+:root.light {
   --color-rojo: #d40000;
+  --color-negro: #000;
+  --color-blanco: #FFF;
   --color-blanco-oscuro: #f5f5f5;
   --color-blanco-oscuro-translucido: #f5f5f5e5;
   --color-sintelec: #008b8b;
   --color-sintelec-alternativo: #14d8d0;
-  --font-Alegreya: "Alegreya", sans-serif;
-  --font-OpenSans: "OpenSans";
   --hover-gradiant-down-up: linear-gradient(180deg, rgba(212,0,0,0.798739564185049) 0%, rgba(0,139,139,1) 100%);
-  --hover-gradiant-left-right: linear-gradient(270deg, rgba(212,0,0,0.8183474073223039) 0%, rgba(0,139,139,1) 100%);
+  --hover-gradiant-left-right: linear-gradient (270deg, rgba(212,0,0,0.8183474073223039) 0%, rgba(0,139,139,1) 100%);
+}
+:root.dark {
+  --color-rojo: #c00000;
+  --color-negro: #FFF;
+  --color-blanco: #000;
+  --color-blanco-oscuro: #1a1a1a; /* Blanco oscuro para fondos */
+  --color-blanco-oscuro-translucido: rgba(26, 26, 26, 0.9); /* Blanco oscuro translúcido */
+  --color-sintelec: #008383; /* Tonos más oscuros para el verde azulado */
+  --color-sintelec-alternativo: #0d615f; /* Tonos más oscuros para el verde azulado alternativo */
+  --hover-gradiant-down-up: linear-gradient(180deg, #c00000 0%, #008383 100%);
+  --hover-gradiant-left-right: linear-gradient(270deg, #c00000 0%, #0d615f 100%); /* Gradiente más oscuro */
 }
 
-body {
+#main_page, #caracteristicas_page {
   background-color: var(--color-blanco-oscuro);
   scroll-behavior: smooth;
   letter-spacing: 0.5px;
   overflow-anchor: none;
+}
+
+header, #principio, #soporte, #ayuda, footer {
+  color: var(--color-blanco);
+}
+
+#beneficios, #caracteristicas_pre, #contact_us {
+  color: var(--color-negro);
 }
 
 footer, header, #soporte, #ayuda {
@@ -122,11 +146,6 @@ p, a, button {
   color: var(--color-sintelec);
 }
 
-.active {
-  text-decoration: underline;
-  color: green;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.2 | 20191019
    License: none (public domain)
@@ -204,7 +223,7 @@ header nav, footer nav {
 
 header {
   background-color: var(--color-rojo);
-  color: white;
+  color: var(--color-blanco);
   padding: 10px 0px;
   position: fixed;
   z-index: 2;
@@ -212,12 +231,12 @@ header {
 header .logo {
   width: 100px;
 }
-header .menu {
+header .menu, header #cambiar-tema {
   width: 60px;
 }
 
 .btn {
-  color: #FFF;
+  color: var(--color-blanco);
   border: 2px solid var(--color-rojo);
   background-color: var(--color-rojo);
   border-radius: 20px;
@@ -237,7 +256,7 @@ header .menu {
 }
 
 .btn_reves {
-  color: #FFF;
+  color: var(--color-blanco);
   border: 2px solid var(--color-sintelec);
   background-color: var(--color-sintelec);
   border-radius: 20px;
@@ -253,51 +272,9 @@ header .menu {
 .btn_reves:hover {
   transition: 0.6s;
   box-shadow: inset 0 100px 0 0 var(--color-rojo);
-  border: 2px solid white;
+  border: 2px solid var(--color-blanco);
 }
 
-/*
-
-// Botones antiguos
-
-.btn {
-    background-color: var(--color-rojo);
-    text-align: center;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.btn:hover {
-    transition: 0.5s;
-    background-color: var(--color-sintelec);
-}
-
-.btn_reves {
-    background-color: var(--color-sintelec);
-    border: var(--color-sintelec) 1px solid;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.btn_reves:hover {
-    transition: 0.5s;
-    border: white 1px solid;
-    background-color: var(--color-rojo);
-}
-
-*/
 #caracteristicas_page .caracteristicas_tabla {
   padding-top: 150px;
 }
@@ -313,7 +290,7 @@ header .menu {
 }
 
 #soporte h2 {
-  color: white;
+  color: var(--color-blanco);
 }
 #soporte .celdas:last-child {
   padding-bottom: 20px;
@@ -327,7 +304,7 @@ header .menu {
 }
 
 footer {
-  color: white;
+  color: var(--color-blanco);
   padding: 15px 0px;
   display: flex;
 }
@@ -386,7 +363,7 @@ footer p {
   transform: translate(-50%, -50%);
   z-index: 1;
   padding: 40px 0px;
-  color: white;
+  color: var(--color-blanco);
 }
 #principio .cambiar_color_azul {
   font-size: 14px;
@@ -466,7 +443,7 @@ footer p {
 #contact_us #fondo {
   background-color: var(--color-rojo);
   padding: 70px 20px;
-  color: white;
+  color: var(--color-blanco);
   border-radius: 20px;
   width: 50%;
 }
@@ -657,6 +634,11 @@ footer p {
     grid-area: c;
   }
 }
+@media (max-width: 1350px) {
+  header div svg {
+    margin: 0px 50px 0px 0px;
+  }
+}
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -677,6 +659,9 @@ footer p {
     justify-content: space-between;
     width: 40%;
     align-items: center;
+  }
+  header div a {
+    margin: 0px 0px 0px 20px;
   }
   header #menu {
     display: flex !important;
