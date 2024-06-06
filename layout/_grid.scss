@@ -1,5 +1,7 @@
+// Pagina principal
+
 @media (min-width: 1024px) {
-    body {
+    #main_page {
         display: grid;
         gap: 0px;
         grid-template-columns: repeat(3, 1fr);
@@ -15,6 +17,10 @@
         "e e e";
         grid-template-rows: auto;
 
+        header {
+            grid-area: a;
+        }
+
         #principio {
             grid-area: b;
         }
@@ -27,7 +33,7 @@
             grid-area: d;
         }
 
-        .caracteristicas {
+        #caracteristicas_pre {
             grid-area: g;
         }
 
@@ -41,6 +47,154 @@
 
         #contact_us {
             grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
+        }
+
+    }
+}
+
+@media (max-width: 1024px) {
+    #main_page {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template:
+        "a a"
+        "b b"
+        "h h"
+        "d d"
+        "g g"
+        "c c"
+        "f f"
+        "i i"
+        "e e";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        #principio {
+            grid-area: b;
+        }
+
+        #ayuda {
+            grid-area: c;
+        }
+
+        #soporte {
+            grid-area: d;
+        }
+
+        #caracteristicas_pre {
+            grid-area: g;
+        }
+
+        #premise {
+            grid-area: f;
+        }
+
+        #beneficios {
+            grid-area: h;
+        }
+
+        #contact_us {
+            grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
+        }
+
+    }
+}
+
+@media (max-width: 500px) {
+    #main_page {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template:
+        "a"
+        "b"
+        "h"
+        "h"
+        "h"
+        "h"
+        "d"
+        "g"
+        "c"
+        "c"
+        "f"
+        "i"
+        "e";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        #principio {
+            grid-area: b;
+        }
+
+        #ayuda {
+            grid-area: c;
+        }
+
+        #soporte {
+            grid-area: d;
+        }
+
+        #caracteristicas_pre {
+            grid-area: g;
+        }
+
+        #premise {
+            grid-area: f;
+        }
+
+        #beneficios {
+            grid-area: h;
+        }
+
+        #contact_us {
+            grid-area: i;
+        }
+
+        footer {
+            grid-area: e;
+        }
+
+    }
+}
+
+// Caracteristicas page
+
+@media (min-width: 1024px) {
+    #caracteristicas_page {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template:
+        "a a a"
+        "b b b"
+        "c c c";
+        grid-template-rows: auto;
+
+        header {
+            grid-area: a;
+        }
+
+        .caracteristicas_tabla {
+            grid-area: b;
+        }
+
+        footer {
+            grid-area: c;
         }
 
     }

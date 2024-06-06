@@ -1,10 +1,16 @@
-#caracteristicas_page {
-    .caracteristicas {
-        padding-top: 150px;
+#caracteristicas_page .caracteristicas_tabla {
+    
+    padding-top: 150px;
+
+    button {
+        margin-top: 30px;
     }
+    
 }
 
-.caracteristicas {
+#caracteristicas_pre .caracteristicas {
+
+    text-align: center;
 
     p {
         padding-left: 15px;

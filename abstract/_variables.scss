@@ -1,11 +1,29 @@
 :root {
-    --color-rojo: #d40000;
-    --color-blanco-oscuro: #f5f5f5;
-    --color-blanco-oscuro-translucido: #f5f5f5e5;
-    --color-sintelec: #008b8b;
-    --color-sintelec-alternativo: #14d8d0;
     --font-Alegreya: "Alegreya", sans-serif;
     --font-OpenSans: "OpenSans";
-    --hover-gradiant-down-up: linear-gradient(180deg, rgba(212,0,0,0.798739564185049) 0%, rgba(0,139,139,1) 100%);
-    --hover-gradiant-left-right: linear-gradient(270deg, rgba(212,0,0,0.8183474073223039) 0%, rgba(0,139,139,1) 100%);
+
+    &.light {
+        --color-rojo: #d40000;
+        --color-negro: #000;
+        --color-blanco: #FFF;
+        --color-blanco-all: #FFF;
+        --color-blanco-oscuro: #f5f5f5;
+        --color-blanco-oscuro-translucido: #f5f5f5e5;
+        --color-sintelec: #008b8b;
+        --color-sintelec-alternativo: #14d8d0;
+        --hover-gradiant-down-up: linear-gradient(180deg, rgba(212,0,0,0.798739564185049) 0%, rgba(0,139,139,1) 100%);
+        --hover-gradiant-left-right: linear-gradient    (270deg, rgba(212,0,0,0.8183474073223039) 0%, rgba(0,139,139,1) 100%);
+    }
+    &.dark {
+        --color-rojo: #c00000; 
+        --color-negro: #FFF;
+        --color-blanco: #000; 
+        --color-blanco-all: #FFF;
+        --color-blanco-oscuro: #1a1a1a; /* Blanco oscuro para fondos */
+        --color-blanco-oscuro-translucido: rgba(26, 26, 26, 0.9); /* Blanco oscuro translúcido */
+        --color-sintelec: #008383; /* Tonos más oscuros para el verde azulado */
+        --color-sintelec-alternativo: #0d615f; /* Tonos más oscuros para el verde azulado alternativo */
+        --hover-gradiant-down-up: linear-gradient(180deg, #c00000 0%, #008383 100%);
+        --hover-gradiant-left-right: linear-gradient(270deg, #c00000 0%, #0d615f 100%); /* Gradiente más oscuro */
+    }
 }

@@ -23,13 +23,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        width: 35%;
         padding: 40px 0px;
-        background-color: var(--color-blanco-oscuro-translucido);
+        color: var(--color-blanco);
       }
       
       .cambiar_color_azul {
         font-size: 14px;
+        font-weight: bold;
       }
 
 }
