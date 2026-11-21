@@ -1,15 +1,24 @@
-body {
+#main_page, #caracteristicas_page {
     background-color: var(--color-blanco-oscuro);
     scroll-behavior: smooth;
     letter-spacing: 0.5px;
+    overflow-anchor: none;
 }
 
-header, footer, #soporte, #ayuda {
-    background-color: var(--color-rojo);
+header, #principio, #soporte, #ayuda, footer {
+    color: var(--color-blanco);
+}
+
+#beneficios, #caracteristicas_pre, #contact_us {
+    color: var(--color-negro);
+}
+
+footer, header, #soporte, #ayuda {
+    background-color: var(--color-rojo) !important;
     width: 100%;
 }
 
-.caracteristicas, #soporte div, #premise, #ayuda div, #beneficios div, #contact_us {
+#caracteristicas_pre, #soporte > div, #premise, #ayuda > div, #beneficios > div, #contact_us, .caracteristicas_tabla {
     max-width: 1000px;
 }
 
@@ -40,6 +49,10 @@ h2 {
 
 .icono_p {
     font-size: 17px;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit
 }
 
 h3 {
@@ -71,10 +84,11 @@ p,a, button {
 
 .flex {
     display: flex;
+    justify-content: center;
 }
 
 .celdas {
-    margin: 20px 10px;
+    margin: 10px 5px;
     padding: 7px 10px;
     flex-direction: column;
     border-radius: 5px;
@@ -83,22 +97,21 @@ p,a, button {
 }
 
 .celdas_fondo {
-    margin: 20px 10px;
-    padding: 7px 20px;
+    margin: 10px;
+    padding: 7px 10px;
     border-radius: 18px;
     background-color: var(--color-sintelec);
     color: var(--color-blanco-oscuro);
     height: 200px;
-    display: flex;
-    transition: width 0.5s ease, height 0.5s ease;
+    transition: height 0.5s ease;
     align-items: center;
+    display: grid;
 }
 
 .celdas_fondo:hover {
     transition: 0.5s;
     background: var(--hover-gradiant-down-up);
     height: 220px;
-    width: calc(100% + 20px);
 }
 
 .cambiar_color {
@@ -108,3 +121,8 @@ p,a, button {
 .cambiar_color_azul {
     color: var(--color-sintelec);
 }
+
+//.active {
+//    text-decoration: underline;
+//    color: green;
+//}  

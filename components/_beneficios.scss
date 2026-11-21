@@ -1,5 +1,10 @@
 #beneficios {       
 
+    /*background-image: url(../public/img/132.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+
     p {
         font-size: 16px;
     }
@@ -13,7 +18,7 @@
             width: 30px;
             height: 30px;
             background-color: var(--color-sintelec);
-            color: var(--color-blanco-oscuro);
+            color: var(--color-blanco-all);
             border-radius: 50%;
             display: flex;
             justify-content: center;

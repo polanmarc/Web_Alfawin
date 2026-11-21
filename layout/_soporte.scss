@@ -1,0 +1,20 @@
+@media (max-width: 500px) {
+
+  #soporte {
+
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .celdas {
+      width: 350px;
+
+      ul > li {
+        margin-left: 20px;
+      }
+
+    }
+
+  }   
+
+}

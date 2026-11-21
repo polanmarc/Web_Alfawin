@@ -1,0 +1,11 @@
+@media (max-width: 480px) {
+
+    #contact_us > div > div:first-child {
+        flex-direction: column;
+    }
+
+    #contact_us .separar:first-child {
+        margin-bottom: 20px;
+    }
+
+}

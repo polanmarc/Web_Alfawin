@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="light">
 
 <head>
   <meta charset="UTF-8">
@@ -10,177 +10,48 @@
   <link rel="shortcut icon" href="../img/icono-alfawin.ico" type="image/x-icon">
 </head>
 
-<body>
-  <header>
+<body id="main_page">
+  <header class="animated-section-left-right animation">
     <div>
-      <a href="index.html"><img src="../img/alfawin-imagotip.png" alt="Logotip"></a>
+      <a href="index.html"><img src="../img/alfawin-imagotip.png" alt="Logotipo" class="logo"></a>
+      <svg id="cambiar-tema" class="icon icon-contrast"><use xlink:href="#icon-contrast"><symbol id="icon-contrast" viewBox="0 0 32 32">
+        <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM4 16c0-6.627 5.373-12 12-12v24c-6.627 0-12-5.373-12-12z"></path>
+        </symbol></use></svg>
+      <img src="../img/barra-de-menus.png" alt="Icono menú" class="menu">
     </div>
     <nav>
-      <ul>
+      <ul id="menu">
         <li><a href="#beneficios">Beneficios</a></li>
         <li><a href="#soporte">Soporte</a></li>
-        <li><a href="#caracteristicas">Carcateristicas</a></li>
+        <li><a href="#caracteristicas_pre">Características</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
+        <li><a href="#contact_us">Contact Us</a></li>
+      </ul>
+      <ul id="aparecer">
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#soporte">Soporte</a></li>
+        <li><a href="#caracteristicas_pre">Características</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
         <li><a href="#contact_us">Contact Us</a></li>
       </ul>
     </nav>
   </header>
-  <section id="principio">
-    <video autoplay muted loop id="video-fondo">
+<section id="principio" class="underline">
+  <video autoplay muted loop id="video-fondo">
       <source src="../video/alfawin-video-mp4-recortado.mp4" type="video/mp4">
       Tu navegador no admite la reproducción de videos.
-    </video>
-    <div class="container flex">
+  </video>
+  <div class="animated-section-down-up animation container flex">
       <h1>ALFAWIN</h1>
       <p>El software de Gestión y <br> Contabilidad que se adapta a tus<br> necesidades</p>
       <p class="cambiar_color_azul">Más de 300 instalaciones</p>
-      <div class="flex"><button class="btn"><a href="promise.html">Ver más</a></button></div>
-    </div>
-  </section>
-  <section id="soporte">
-    <div>
-      <h2>Soporte Sintelec</h2>
-      <div class="container">
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Software</h3>
-          <nav>
-            <ul>
-              <li>Desarrollo de Software</li>
-              <li>Sintelec AlfaWin: Gestión y contabilidad</li>
-              <li>Sintelec AlfaWin TPV</li>
-              <li>Microaplicaciones (programación a medida)</li>
-              <li>Sintelec TiQ: Ticketing y gestión de actividad</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Servicios Cloud</h3>
-          <nav>
-            <ul>
-              <li>Proyectos integrales de Google Workspace</li>
-              <li>Proyectos integrales de Microsoft 365</li>
-              <li>Sintelec TiQ</li>
-              <li>Plataforma Sintelec WebAPP: Productividad y comunicación</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Voz IP y Comunicaciones Unificadas</h3>
-          <nav>
-            <ul>
-              <li>Plataforma integral de comunicaciones unificadas</li>
-              <li>Centralitas VoIP</li>
-              <li>Telecomunicaciones asociadas a VoIP</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Servicios Profesionales</h3>
-          <nav>
-            <ul>
-              <li>Auditorías de Tecnologías de la Información (TIC)</li>
-              <li>Consultoría de Sistemas, Software y Telecomunicaciones</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="container">
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Mantenimiento y Soporte</h3>
-          <nav>
-            <ul>
-              <li>Mantenimiento integral de Tecnologías de la Información (TI) y Telecomunicaciones</li>
-              <nav>
-                <ul>
-                  <li>Sistemas de TI</li>
-                  <li>Ciberseguridad</li>
-                  <li>Voz IP y Comunicaciones Unificadas</li>
-                  <li>Infraestructuras y servicios Wi-Fi</li>
-                  <li>WIFI4EU</li>
-                </ul>
-              </nav>
-              <li>Mantenimientos a medida</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Infraestructures i serveis Wifi</h3>
-          <nav>
-            <ul>
-              <li>Disseny i integració de sistemes WIFI professionals</li>
-              <li>Projectes INTEGRALS WIFI4EU per municipis de Catalunya</li>
-              <li>SmartWIFI i WIFI Marketing</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Integración de Sistemas</h3>
-          <nav>
-            <ul>
-              <li>Diseño y administración de redes</li>
-              <li>Configuración y mantenimiento de servidores</li>
-              <li>Telecomunicaciones</li>
-              <li>Ciberseguridad</li>
-              <li>Gestión de copias de seguridad</li>
-              <li>Videovigilancia</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="celdas">
-          <p class="icono_p">Icono de cada seccion</p>
-          <h3>Ventas</h3>
-          <nav>
-            <ul>
-              <li>Suministro e instalación de equipos informáticos, periféricos, licencias, aplicaciones, accesorios y
-                componentes de Tecnologías de la Información (TI)</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="ayuda">
-    <div>
-      <h2>¿Como Podemos Ayudarte?</h2>
-      <div class="container">
-        <div class="celdas_fondo">
-          <p>Estoy buscando
-            un programa
-            para la gestíon
-            y contabilidad
-            de mi empresa.</p>
-        </div>
-        <div class="celdas_fondo">
-          <p>He leido las
-            especificaciones
-            y no estoy
-            seguro si es lo
-            que necesito.</p>
-        </div>
-        <div class="celdas_fondo">
-          <p>No tengo claro si
-            funcionara en mi
-            equipo/s.</p>
-        </div>
-        <div class="celdas_fondo">
-          <p>Son obligatorios
-            los servicios de
-            soporte y
-            actualizaciones.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="beneficios">
+      <div class="flex"><button class="btn"><a href="">Ver más</a></button></div>
+  </div>
+</section>
+  <section id="beneficios" class="underline">
     <div class="conteiner">
-      <h2>Beneficios</h2>
-      <div class="container" id="pos1">
+      <h2 class="animated-section-right-left animation">Beneficios</h2>
+      <div class="animated-section-left-right animation container" id="pos1">
         <div class="vertical-line">
           <span>1</span>
           <span>2</span>
@@ -206,12 +77,155 @@
       </div>
     </div>
   </section>
-  <section class="caracteristicas">
-    <p><a style="color: black;" href="caracteristicas.html">Hola</a></p>
+  <section id="soporte" class="underline">
+    <div>
+      <h2 class="animated-section-left-right animation" id="texto">Soporte Sintelec</h2>
+      <div class="animated-section-right-left animation container">
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Software</h3>
+          <nav>
+            <ul>
+              <li>Desarrollo de Software</li>
+              <li>Sintelec AlfaWin: Gestión y contabilidad</li>
+              <li>Sintelec AlfaWin TPV</li>
+              <li>Microaplicaciones (programación a medida)</li>
+              <li>Sintelec TiQ: Ticketing y gestión de actividad</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Servicios Cloud</h3>
+          <nav>
+            <ul>
+              <li>Proyectos integrales de Google Workspace</li>
+              <li>Proyectos integrales de Microsoft 365</li>
+              <li>Sintelec TiQ</li>
+              <li>Plataforma Sintelec WebAPP: Productividad y comunicación</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Voz IP y Comunicaciones Unificadas</h3>
+          <nav>
+            <ul>
+              <li>Plataforma integral de comunicaciones unificadas</li>
+              <li>Centralitas VoIP</li>
+              <li>Telecomunicaciones asociadas a VoIP</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Servicios Profesionales</h3>
+          <nav>
+            <ul>
+              <li>Auditorías de Tecnologías de la Información (TIC)</li>
+              <li>Consultoría de Sistemas, Software y Telecomunicaciones</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="animated-section-left-right animation container">
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Mantenimiento y Soporte</h3>
+          <nav>
+            <ul>
+              <li>Mantenimiento integral de Tecnologías de la Información (TI) y Telecomunicaciones</li>
+              <nav>
+                <ul>
+                  <li>Sistemas de TI</li>
+                  <li>Ciberseguridad</li>
+                  <li>Voz IP y Comunicaciones Unificadas</li>
+                  <li>Infraestructuras y servicios Wi-Fi</li>
+                  <li>WIFI4EU</li>
+                </ul>
+              </nav>
+              <li>Mantenimientos a medida</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Infraestructuras i serveis Wifi</h3>
+          <nav>
+            <ul>
+              <li>Disseny i integració de sistemes WIFI professionals</li>
+              <li>Projectes INTEGRALS WIFI4EU per municipis de Catalunya</li>
+              <li>SmartWIFI i WIFI Marketing</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Integración de Sistemas</h3>
+          <nav>
+            <ul>
+              <li>Diseño y administración de redes</li>
+              <li>Configuración y mantenimiento de servidores</li>
+              <li>Telecomunicaciones</li>
+              <li>Ciberseguridad</li>
+              <li>Gestión de copias de seguridad</li>
+              <li>Videovigilancia</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="celdas">
+          <p class="icono_p">Icono de cada sección</p>
+          <h3>Ventas</h3>
+          <nav>
+            <ul>
+              <li>Suministro e instalación de equipos informáticos, periféricos, licencias, aplicaciones, accesorios y
+                componentes de Tecnologías de la Información (TI)</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="contact_us">
+  <section id="caracteristicas_pre" class="underline">
+    <div class="animated-section-right-left animation container">
+      <div>
+        <h2>Características</h2>
+        <p>Hay dos tipos de licencias: <b class="cambiar_color_azul">Alfawin LTD</b> y <b class="cambiar_color_azul">Alfawin</b>... que <br> muchimsas características y funcionalidades</p>
+        <div class="flex"><button class="btn"><a href="caracteristicas.html">Ver más</a></button></div>
+      </div>
+    </div>
+  </section>
+  <section id="ayuda" class="underline">
+    <div>
+      <h2>¿Cómo<br> Podemos<br> Ayudarte?</h2>
+      <div class="hola">
+        <div class="celdas_fondo">
+          <p>Estoy buscando un 
+            programa para la 
+            gestión y contabilidad 
+            de mi empresa.</p>
+        </div>
+        <div class="celdas_fondo">
+          <p>Son obligatorios 
+            los servicios de 
+            soporte y actualizaciones.</p>
+        </div>
+        <div class="celdas_fondo">
+          <p>No tengo claro 
+            si funcionará 
+            en mi equipo/s.</p>
+        </div>
+        <div class="celdas_fondo">
+          <p>He leído las especificaciones 
+            y no estoy seguro si es 
+            lo que necesito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact_us" class="underline">
     <div class="container">
-      <div class="container">
+      <div class="animated-section-left-right flex animation">
         <div class="separar">
           <h2>Contacto</h2>
           <h3>Sintelec</h3>
@@ -220,23 +234,24 @@
             (Cantonada Passatge Ymbern) <br>
             08302 Mataró <br>
             Barcelona</p>
+            <p><i class="fa fa-map-o"></i><a href="https://www.google.com/maps/place/Sintelec/@41.5370213,2.4360204,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4b51fa4eb43e7:0x521a8d67d7e0ef79!8m2!3d41.5370173!4d2.4385953!16s%2Fg%2F1td1y2vw?entry=ttu"> Como legar</a></p>
         </div>
         <div class="separar">
           <div>
-            <h3><i class="icono_p">Icono</i> Telefono</h3>
+            <h3><i class="icono_p"></i> Teléfono</h3>
             <p>+34 935 500 865</p>
           </div>
           <div>
-            <h3><i class="icono_p">Icono</i> Soporte</h3>
-            <p>suport@sintelec.es</p>
+            <h3><i class="icono_p"></i> Soporte</h3>
+            <p>soporte@sintelec.es</p>
           </div>
           <div>
-            <h3><i class="icono_p">Icono</i> Trabaja con nostros</h3>
+            <h3><i class="icono_p"></i>Trabaja con nosotros</h3>
             <p>info@sintelec.es</p>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="animated-section-right-left flex animation" id="fondo">
         <div>
           <h2>Soporte</h2>
           <h3>Help Desk Sintelec</h3>
@@ -248,7 +263,7 @@
   </section>
   <footer>
     <div>
-      <p>© Alfawin - Sintelec</p>
+      <p>&copy; Alfawin - Sintelec</p>
     </div>
     <nav>
       <ul>
